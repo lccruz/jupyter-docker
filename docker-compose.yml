@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  python-dev:
+    container_name: python-dev
+    command: /entrypoint.sh jupyter
+    build:
+      context: ./code/
+      dockerfile: ../Dockerfile
+    volumes:
+      - ./code/:/code/
+      - ./code/entrypoint.sh:/entrypoint.sh      
+    ports:
+      - "4000:4000"
