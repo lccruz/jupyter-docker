@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install -y \
       python3-dev \
@@ -11,4 +11,4 @@ WORKDIR /code
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
-RUN pip3 install jupyter
+RUN pip3 install notebook
